@@ -1,0 +1,34 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.toolbar-top {
+  position: fixed;
+  z-index:10;
+}
+
+.progress-spinner {
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  z-index:10;
+  background-color:rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+

@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="toolbar-top">
+  <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<mat-sidenav-container [hasBackdrop]=true fullscreen>
+  <mat-sidenav mode="over" #sidenav fixedInViewport="true">
+    <mat-toolbar></mat-toolbar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar></mat-toolbar>
+      <div #overlay class="overlay">
+        <mat-progress-spinner class="progress-spinner" [value]="value" role="status" diameter="50">
+        </mat-progress-spinner>
+      </div>
+      <div #content class="content" >
+        <app-start-page (scroll)="onScroll($event)">
+        </app-start-page>
+            </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
